@@ -26,6 +26,7 @@ struct PodcastLargeView: View {
                 .foregroundColor(.purple)
         }
         .padding()
+        .frame(width: 250, height: 350)
     }
 }
 
