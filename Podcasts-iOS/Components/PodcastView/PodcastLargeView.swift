@@ -15,9 +15,12 @@ struct PodcastLargeView: View {
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(8)
                 .padding(.bottom, 10)
-            Text("NEW • MONDAY")
-                .font(.caption2)
-                .foregroundColor(.gray)
+            HStack {
+                VisualAudioView(isPlaying: true)
+                Text("NEW • MONDAY")
+                    .font(.caption2)
+                    .foregroundColor(.gray)
+            }
             Text("#82: Avoiding the Buzz Saw (Bret Weinstein & Heather Heying DarkHorse Livestream)")
                 .font(.body)
                 .lineLimit(2)

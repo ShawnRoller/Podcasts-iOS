@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293CE1B5267B8801007CF758 /* VisualAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293CE1B4267B8801007CF758 /* VisualAudioView.swift */; };
 		29DC22522678DF5A00E26F10 /* Podcasts_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DC22512678DF5A00E26F10 /* Podcasts_iOSApp.swift */; };
 		29DC22542678DF5A00E26F10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DC22532678DF5A00E26F10 /* ContentView.swift */; };
 		29DC22562678DF5B00E26F10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29DC22552678DF5B00E26F10 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293CE1B4267B8801007CF758 /* VisualAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualAudioView.swift; sourceTree = "<group>"; };
 		29DC224E2678DF5A00E26F10 /* Podcasts-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Podcasts-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DC22512678DF5A00E26F10 /* Podcasts_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcasts_iOSApp.swift; sourceTree = "<group>"; };
 		29DC22532678DF5A00E26F10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				29E00EA7267A32FF00C83B90 /* PodcastView */,
 				29E00EA2267A31DF00C83B90 /* PodcastView.swift */,
+				293CE1B4267B8801007CF758 /* VisualAudioView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29E00EA9267A331800C83B90 /* PodcastMediumView.swift in Sources */,
+				293CE1B5267B8801007CF758 /* VisualAudioView.swift in Sources */,
 				29E00EA3267A31DF00C83B90 /* PodcastView.swift in Sources */,
 				29DC22542678DF5A00E26F10 /* ContentView.swift in Sources */,
 				29DC22522678DF5A00E26F10 /* Podcasts_iOSApp.swift in Sources */,
