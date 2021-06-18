@@ -22,15 +22,13 @@ struct PodcastSmallView: View {
                     .font(.body)
                     .lineLimit(2)
                 HStack {
-                    Image(systemName: "play.circle.fill")
-                        .foregroundColor(.gray)
-                        .padding(.all, -4)
-                        .background(Color.purple)
-                        .clipShape(Circle())
-                        .font(.title)
+                    PlayButton()
                     Text("1 hr 10 min")
                         .font(.subheadline)
                         .foregroundColor(.purple)
+                    Spacer()
+                    // TODO: replace with ellipsis
+                    Text("...")
                 }
                 .frame(height: 30)
             }
