@@ -43,7 +43,7 @@ struct VisualAudioView: View {
         HStack(alignment: .bottom, spacing: 2) {
             Text("")
             Rectangle()
-                .fill(Color.gray)
+                .fill(ThemeColor.Gray3)
                 .frame(width: self.width, height: self.firstHeight)
                 .onAppear {
                     if self.isPlaying {
@@ -53,7 +53,7 @@ struct VisualAudioView: View {
                     }
                 }
             Rectangle()
-                .fill(Color.gray)
+                .fill(ThemeColor.Gray3)
                 .frame(width: self.width, height: self.secondHeight)
                 .onAppear {
                     if self.isPlaying {
@@ -63,7 +63,7 @@ struct VisualAudioView: View {
                     }
                 }
             Rectangle()
-                .fill(Color.gray)
+                .fill(ThemeColor.Gray3)
                 .frame(width: self.width, height: self.thirdHeight)
                 .onAppear {
                     if self.isPlaying {
@@ -73,7 +73,7 @@ struct VisualAudioView: View {
                     }
                 }
             Rectangle()
-                .fill(Color.gray)
+                .fill(ThemeColor.Gray3)
                 .frame(width: self.width, height: self.fourthHeight)
                 .onAppear {
                     if self.isPlaying {

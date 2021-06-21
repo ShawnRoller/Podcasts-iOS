@@ -17,7 +17,7 @@ struct PodcastSmallView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text("NEW • MONDAY")
                     .font(.caption2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(ThemeColor.Gray3)
                 Text("#82: Avoiding the Buzz Saw (Bret Weinstein & Heather Heying DarkHorse Livestream)")
                     .font(.body)
                     .lineLimit(2)
@@ -25,10 +25,11 @@ struct PodcastSmallView: View {
                     PlayButton()
                     Text("1 hr 10 min")
                         .font(.subheadline)
-                        .foregroundColor(.purple)
+                        .foregroundColor(ThemeColor.Primary)
                     Spacer()
                     // TODO: replace with ellipsis
                     Text("...")
+                        .foregroundColor(ThemeColor.Gray3)
                 }
                 .frame(height: 30)
             }

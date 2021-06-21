@@ -15,7 +15,7 @@ struct PlayingBar: View {
             ProgressBar(progressPercent: 30)
             Text("10 min left")
                 .font(.subheadline)
-                .foregroundColor(.purple)
+                .foregroundColor(ThemeColor.Primary)
         }
         .padding()
     }

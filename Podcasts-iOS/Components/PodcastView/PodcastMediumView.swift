@@ -19,7 +19,7 @@ struct PodcastMediumView: View {
                 .lineLimit(1)
             Text("DarkHorse Podcast")
                 .font(.body)
-                .foregroundColor(.gray)
+                .foregroundColor(ThemeColor.Gray3)
         }
         .padding()
         .frame(width: 200, height: 250)

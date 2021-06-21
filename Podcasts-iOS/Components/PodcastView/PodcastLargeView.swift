@@ -19,14 +19,14 @@ struct PodcastLargeView: View {
                 VisualAudioView(isPlaying: true)
                 Text("NEW • MONDAY")
                     .font(.caption2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(ThemeColor.Gray3)
             }
             Text("#82: Avoiding the Buzz Saw (Bret Weinstein & Heather Heying DarkHorse Livestream)")
                 .font(.body)
                 .lineLimit(2)
             Text("3 Newer Episodes")
                 .font(.subheadline)
-                .foregroundColor(.purple)
+                .foregroundColor(ThemeColor.Primary)
         }
         .padding()
         .frame(width: 250, height: 350)

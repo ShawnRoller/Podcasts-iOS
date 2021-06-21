@@ -12,7 +12,7 @@ struct ProgressBar: View {
     
     var body: some View {
         ProgressView(value: progressPercent, total: 100.0)
-            .accentColor(.purple)
+            .accentColor(ThemeColor.Primary)
     }
 }
 

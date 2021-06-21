@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct PlayButton: View {
+    var isPlaying = true
+    private var icon: String {
+        return isPlaying ? "play.circle.fill" : "pause.circle.fill"
+    }
     var body: some View {
-        Image(systemName: "play.circle.fill")
-            .foregroundColor(.gray)
+        Image(systemName: icon)
+            .foregroundColor(ThemeColor.Gray2)
             .padding(.all, -4)
-            .background(Color.purple)
+            .background(ThemeColor.Primary)
             .clipShape(Circle())
             .font(.title)
     }
@@ -20,6 +24,9 @@ struct PlayButton: View {
 
 struct PlayButton_Previews: PreviewProvider {
     static var previews: some View {
-        PlayButton()
+        HStack {
+            PlayButton(isPlaying: true)
+            PlayButton(isPlaying: false)
+        }
     }
 }
