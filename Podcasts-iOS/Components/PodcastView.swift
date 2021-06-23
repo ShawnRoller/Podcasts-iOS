@@ -25,10 +25,12 @@ struct PodcastView: View {
 
 struct PodcastView_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
-            PodcastView(size: .Large)
-            PodcastView(size: .Medium)
-            PodcastView(size: .Small)
+        ForEach(ColorScheme.allCases, id: \.self) {
+            VStack {
+                PodcastView(size: .Large)
+                PodcastView(size: .Medium)
+                PodcastView(size: .Small)
+            }.preferredColorScheme($0)
         }
     }
 }
