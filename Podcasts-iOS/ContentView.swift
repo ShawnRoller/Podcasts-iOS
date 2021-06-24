@@ -9,11 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-                .padding()
-            PodcastView(size: .Large)
+        TabView {
+            ListenNowScreen()
+                .tabItem {
+                    Label("Listen Now", systemImage: "play.circle.fill")
+                }
+            BrowseScreen()
+                .tabItem {
+                    Label("Browse", systemImage: "square.grid.2x2.fill")
+                }
+            LibraryScreen()
+                .tabItem {
+                    Label("Library", systemImage: "square.stack.fill")
+                }
+            SearchScreen()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
         }
+        .accentColor(ThemeColor.Primary)
     }
 }
 

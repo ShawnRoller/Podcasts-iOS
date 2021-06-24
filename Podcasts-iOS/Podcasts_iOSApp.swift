@@ -12,6 +12,12 @@ struct Podcasts_iOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//                .onAppear() {
+//                    UITabBar.appearance().shadowImage = UIImage()
+//                    UITabBar.appearance().backgroundImage = UIImage()
+//                    UITabBar.appearance().isTranslucent = true
+//                    UITabBar.appearance().backgroundColor = .black
+//                }
         }
     }
 }
