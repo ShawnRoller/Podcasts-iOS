@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct PodcastView: View {
+    var podcast: Podcast
+    var podcastEpisode: PodcastEpisode
     var size: ThumbnailSize
     
     var body: some View {
         if size == .Large {
-           PodcastLargeView()
+            PodcastLargeView(podcast: podcast, podcastEpisode: podcastEpisode)
         } else if size == .Medium {
-            PodcastMediumView()
+            PodcastMediumView(podcast: podcast, podcastEpisode: podcastEpisode)
         } else if size == .Small {
-            PodcastSmallView()
+            PodcastSmallView(podcast: podcast, podcastEpisode: podcastEpisode)
         } else {
-            PodcastLargeView()
+            PodcastLargeView(podcast: podcast, podcastEpisode: podcastEpisode)
         }
     }
 }
@@ -27,9 +29,9 @@ struct PodcastView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
             VStack {
-                PodcastView(size: .Large)
-                PodcastView(size: .Medium)
-                PodcastView(size: .Small)
+                PodcastView(podcast: Podcast.example, podcastEpisode: PodcastEpisode.example, size: .Large)
+                PodcastView(podcast: Podcast.example, podcastEpisode: PodcastEpisode.example, size: .Medium)
+                PodcastView(podcast: Podcast.example, podcastEpisode: PodcastEpisode.example, size: .Small)
             }.preferredColorScheme($0)
         }
     }

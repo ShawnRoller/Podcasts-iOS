@@ -30,7 +30,7 @@ class StringTests: XCTestCase {
         }
     }
     
-    func testStringTime() throws {
+    func testTime() throws {
         let time1 = "280".toTime()
         let time2 = "asdf".toTime()
         let time3 = "38467".toTime()
@@ -38,6 +38,16 @@ class StringTests: XCTestCase {
         XCTAssertEqual(time1, "00:04:40")
         XCTAssertEqual(time2, "00:00:00")
         XCTAssertEqual(time3, "10:41:07")
+    }
+    
+    func testStringTime() throws {
+        let time1 = "280".toStringTime()
+        let time2 = "asdf".toStringTime()
+        let time3 = "38467".toStringTime()
+        
+        XCTAssertEqual(time1, "4 min")
+        XCTAssertEqual(time2, "0 min")
+        XCTAssertEqual(time3, "10 hr 41 min")
     }
     
 }

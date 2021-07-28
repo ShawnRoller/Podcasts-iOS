@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PodcastLargeView: View {
+    var podcast: Podcast
+    var podcastEpisode: PodcastEpisode
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
             Image("podcast1")
@@ -17,14 +20,14 @@ struct PodcastLargeView: View {
                 .padding(.bottom, 10)
             HStack {
                 VisualAudioView(isPlaying: true)
-                Text("NEW • MONDAY")
+                Text(podcastEpisode.relativeReleaseDate)
                     .font(.caption2)
                     .foregroundColor(ThemeColor.Gray3)
             }
-            Text("#82: Avoiding the Buzz Saw (Bret Weinstein & Heather Heying DarkHorse Livestream)")
+            Text("\(podcastEpisode.title) (\(podcast.showName)")
                 .font(.body)
                 .lineLimit(2)
-            Text("3 Newer Episodes")
+            Text(podcast.newerEpisodes)
                 .font(.subheadline)
                 .foregroundColor(ThemeColor.Primary)
         }
@@ -35,6 +38,6 @@ struct PodcastLargeView: View {
 
 struct PodcastLargeView_Previews: PreviewProvider {
     static var previews: some View {
-        PodcastLargeView()
+        PodcastLargeView(podcast: Podcast.example, podcastEpisode: PodcastEpisode.example)
     }
 }

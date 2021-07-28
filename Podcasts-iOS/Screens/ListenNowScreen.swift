@@ -8,22 +8,19 @@
 import SwiftUI
 
 struct ListenNowScreen: View {
+    var podcasts: [Podcast]
+    
     var body: some View {
-        VStack {
-            PodcastView(size: .Large)
-            PodcastView(size: .Large)
-            PodcastView(size: .Large)
-            PodcastView(size: .Large)
-            PodcastView(size: .Large)
-            PodcastView(size: .Large)
-            PodcastView(size: .Large)
-            PodcastView(size: .Large)
+        ForEach(podcasts) { podcast in
+            List(podcast.episodes) { episode in
+                PodcastView(podcast: podcast, podcastEpisode: episode, size: .Large)
+            }
         }
     }
 }
 
 struct ListenNowScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ListenNowScreen()
+        ListenNowScreen(podcasts: [Podcast.example, Podcast.example])
     }
 }

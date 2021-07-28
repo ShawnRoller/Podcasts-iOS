@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    var podcasts: [Podcast]
+    
     var body: some View {
         TabView {
-            ListenNowScreen()
+            ListenNowScreen(podcasts: podcasts)
                 .tabItem {
                     Label("Listen Now", systemImage: "play.circle.fill")
                 }
@@ -33,6 +35,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(podcasts: [Podcast.example, Podcast.example])
     }
 }

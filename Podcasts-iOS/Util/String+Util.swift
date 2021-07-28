@@ -25,4 +25,14 @@ extension String {
         return "\(hours):\(minutes):\(secondsRemaining)"
     }
     
+    func toStringTime() -> String {
+        let seconds = Int(self) ?? 0
+        let hours = seconds / 3600
+        let minutes = seconds % 3600 / 60
+        
+        let hourString = hours > 0 ? "\(hours) hr" : ""
+        let minuteString = hours > 0 ? " \(minutes) min" : "\(minutes) min"
+        
+        return "\(hourString)\(minuteString)"
+    }
 }

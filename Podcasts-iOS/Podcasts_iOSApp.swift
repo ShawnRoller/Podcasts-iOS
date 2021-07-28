@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Podcasts_iOSApp: App {
+    var podcasts: [Podcast] = [Podcast.example, Podcast.example]
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(podcasts: podcasts)
 //                .onAppear() {
 //                    UITabBar.appearance().shadowImage = UIImage()
 //                    UITabBar.appearance().backgroundImage = UIImage()

@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct PodcastMediumView: View {
+    var podcast: Podcast
+    var podcastEpisode: PodcastEpisode
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Image("podcast1")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(8)
-            Text("Bret Weinstein & Heather Heying DarkHorse Livestream")
+            Text(podcastEpisode.title)
                 .font(.body)
                 .lineLimit(1)
-            Text("DarkHorse Podcast")
+            Text(podcast.showName)
                 .font(.body)
                 .foregroundColor(ThemeColor.Gray3)
         }
@@ -28,6 +31,6 @@ struct PodcastMediumView: View {
 
 struct PodcastMediumView_Previews: PreviewProvider {
     static var previews: some View {
-        PodcastMediumView()
+        PodcastMediumView(podcast: Podcast.example, podcastEpisode: PodcastEpisode.example)
     }
 }
