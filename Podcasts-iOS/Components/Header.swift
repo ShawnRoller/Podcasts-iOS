@@ -10,6 +10,7 @@ import SwiftUI
 struct Header: View {
     let title: String
     let image: String?
+    let onProfilePress: (() -> Void)? = nil
     
     var body: some View {
         HStack {
@@ -18,7 +19,7 @@ struct Header: View {
                 .bold()
             Spacer()
             if let image = image {
-                ProfileIcon(image: image)
+                ProfileIcon(image: image, onPress: onProfilePress)
             }
         }
         .frame(height: 80)

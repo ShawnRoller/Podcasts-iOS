@@ -9,13 +9,26 @@ import SwiftUI
 
 struct ProfileIcon: View {
     let image: String
+    var onPress: (() -> Void)? = nil
     
-    var body: some View {
+    var renderImage: some View {
         Image(image)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .clipShape(Circle())
             .padding()
+    }
+    
+    var body: some View {
+        if let onPress = onPress {
+            Button(action: {
+                onPress()
+            }) {
+                renderImage
+            }
+        } else {
+            renderImage
+        }
     }
 }
 
