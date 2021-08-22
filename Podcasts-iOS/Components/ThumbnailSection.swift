@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct ThumbnailSection: View {
-    var podcasts: [PodcastEpisode]
+    var podcasts: [Podcast]
+    var size: ThumbnailSize = .Large
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(podcasts) { podcast in
+                    ForEach(podcast.episodes) { episode in
+                        PodcastView(podcast: podcast, podcastEpisode: episode, size: size)
+                    }
+                }
+            }
+        }
     }
 }
 
 struct ThumbnailSection_Previews: PreviewProvider {
     static var previews: some View {
-        ThumbnailSection(podcasts: [])
+        Group {
+            ThumbnailSection(podcasts: [Podcast.example, Podcast.example], size: .Large)
+            ThumbnailSection(podcasts: [Podcast.example, Podcast.example], size: .Medium)
+            ThumbnailSection(podcasts: [Podcast.example, Podcast.example], size: .Small)
+        }
     }
 }
