@@ -12,7 +12,14 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            ListenNowScreen(podcasts: podcasts)
+            ListenNowScreen(
+                headerTitle: "Listen Now",
+                headerImage: "podcast1",
+                upNextPodcasts: [Podcast.example, Podcast.example],
+                likePodcasts: [Podcast.example, Podcast.example],
+                discoverPodcasts: [Podcast.example, Podcast.example],
+                recentPodcasts: [Podcast.example, Podcast.example]
+            )
                 .tabItem {
                     Label("Listen Now", systemImage: "play.circle.fill")
                 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SectionHeader: View {
     var title: String
-    var subtitle: String
+    var subtitle: String?
     var ctaTitle: String?
     var onCTAPress: () -> Void = {}
     
@@ -28,9 +28,11 @@ struct SectionHeader: View {
                 }
             }
             .frame(height: 40)
-            Text(subtitle)
+            if let subtitle = subtitle {
+                Text(subtitle)
                 .font(.title3)
                 .foregroundColor(ThemeColor.Gray3)
+            }
         }
     }
 }
