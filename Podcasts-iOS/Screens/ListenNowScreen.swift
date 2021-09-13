@@ -21,23 +21,27 @@ struct ListenNowScreen: View {
     var body: some View {
         ScrollView {
             Header(title: headerTitle, image: headerImage)
+            Divider()
             VStack {
                 SectionHeader(title: "Up Next", ctaTitle: "See All", onCTAPress: {print("up next see all pressed")})
                 ThumbnailSection(podcasts: upNextPodcasts, size: .Large)
             }
             .modifier(PodcastSection())
             
+            Divider()
             VStack {
                 SectionHeader(title: "You Might Like", ctaTitle: "See All", onCTAPress: {print("you might like see all pressed")})
                 ThumbnailSection(podcasts: upNextPodcasts, size: .Medium)
             }
             .modifier(PodcastSection())
             
+            Divider()
             VStack {
                 SectionHeader(title: "More to Discover", ctaTitle: "See All", onCTAPress: {print("more to discover see all pressed")})
                 ThumbnailSection(podcasts: upNextPodcasts, size: .Small)
             }
             
+            Divider()
             VStack {
                 SectionHeader(title: "Recently Played", ctaTitle: "See All", onCTAPress: {print("recently played see all pressed")})
                 ThumbnailSection(podcasts: upNextPodcasts, size: .Small)
